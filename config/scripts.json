@@ -1,0 +1,13 @@
+[
+  {
+    "name": "test",
+    "path": "/Users/sajingeo/research/test.sh",
+    "interval_minutes": 60,
+    "enabled": true,
+    "venv_path": null,
+    "id": "00fc7954-3a1c-4ff5-a626-cd52c009b967",
+    "last_run": null,
+    "last_status": null,
+    "last_output": null
+  }
+]
