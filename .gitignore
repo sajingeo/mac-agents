@@ -16,6 +16,9 @@ build/
 # Logs
 config/logs/
 
+# User config
+config/scripts.json
+
 # IDE
 .vscode/
 .idea/
