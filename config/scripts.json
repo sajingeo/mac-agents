@@ -1,13 +1,13 @@
 [
   {
-    "name": "test",
-    "path": "/Users/sajingeo/research/test.sh",
-    "interval_minutes": 60,
+    "name": "Tesla Charge Alarm",
+    "path": "/Users/sajingeorge/workspace/TeslaChargeAlarm/charge_alarm.py",
+    "interval_minutes": 5,
     "enabled": true,
-    "venv_path": null,
-    "id": "00fc7954-3a1c-4ff5-a626-cd52c009b967",
-    "last_run": null,
-    "last_status": null,
-    "last_output": null
+    "venv_path": "/Users/sajingeorge/workspace/TeslaChargeAlarm/.venv",
+    "id": "d1cc1cd6-8d87-489b-9d37-f1e661401633",
+    "last_run": "2026-03-10T00:38:57.576440",
+    "last_status": "success",
+    "last_output": "Complete | 80% (limit 80%) | \u2014"
   }
 ]
