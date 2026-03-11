@@ -35,6 +35,7 @@ class ScriptConfig:
     enabled: bool = True
     venv_path: Optional[str] = None
     id: str = field(default_factory=lambda: str(uuid.uuid4()))
+    notify: bool = False
     last_run: Optional[str] = None
     last_status: Optional[str] = None  # "success", "fail", or None
     last_output: Optional[str] = None

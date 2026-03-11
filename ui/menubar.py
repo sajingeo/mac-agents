@@ -88,6 +88,10 @@ class MacAgentsApp(rumps.App):
             toggle_item = rumps.MenuItem(toggle_label, callback=lambda _, sid=script.id, en=script.enabled: self._on_toggle(sid, en))
             item.add(toggle_item)
 
+        notify_label = "Notifications: On" if script.notify else "Notifications: Off"
+        notify_item = rumps.MenuItem(notify_label, callback=lambda _, sid=script.id, n=script.notify: self._on_toggle_notify(sid, n))
+        item.add(notify_item)
+
         remove_item = rumps.MenuItem("Remove", callback=lambda _, sid=script.id: self._on_remove(sid))
         item.add(remove_item)
 
@@ -152,6 +156,10 @@ class MacAgentsApp(rumps.App):
             self._scheduler.schedule(script)
         else:
             self._scheduler.unschedule(script_id)
+        self._build_menu()
+
+    def _on_toggle_notify(self, script_id, currently_notify):
+        self._manager.update(script_id, notify=not currently_notify)
         self._build_menu()
 
     def _on_remove(self, script_id):

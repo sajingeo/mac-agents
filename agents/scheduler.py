@@ -69,5 +69,6 @@ class AgentScheduler:
         log.info("Running %s (%s)", script.name, script.path)
         result = run_script(script.path, venv_path=script.venv_path)
         self._manager.record_run(script.id, result.success, result.output, result.exit_code)
-        notify_run_result(script.name, result.success, result.output)
+        if script.notify:
+            notify_run_result(script.name, result.success, result.output)
         log.info("Finished %s — %s", script.name, "OK" if result.success else "FAIL")
